@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>凉径 CoolPath · AI for Climate 青年气候黑客松</title>
+<style>
+  :root{
+    --bg:#070B0A; --panel:#0C1211; --line:rgba(233,240,236,.12);
+    --ink:#EDEFE9; --muted:#8B958F; --dim:#5E6964;
+    --cool:#5FE3C0; --hot:#FF5B3D; --amber:#F5B84E;
+    --sans:"Inter","HarmonyOS Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:
+      radial-gradient(1200px 600px at 12% -8%, rgba(95,227,192,.10), transparent 60%),
+      radial-gradient(900px 520px at 88% 4%, rgba(255,91,61,.10), transparent 62%),
+      var(--bg);
+    color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:64px 24px 80px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--cool);border:1px solid rgba(95,227,192,.28);
+    background:rgba(95,227,192,.07);border-radius:999px;padding:6px 13px}
+  .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--cool);
+    box-shadow:0 0 0 3px rgba(95,227,192,.16)}
+  h1{font-size:clamp(34px,5.4vw,58px);line-height:1.1;letter-spacing:-.03em;margin:22px 0 18px;font-weight:800}
+  h1 em{font-style:normal;color:var(--cool)}
+  h1 .hot{color:var(--hot)}
+  .lead{max-width:720px;color:#C6D0CA;font-size:15px;line-height:1.85;margin:0 0 8px}
+  .lead b{color:var(--ink);font-weight:600}
+  .stats{display:flex;gap:34px;flex-wrap:wrap;margin:34px 0 44px}
+  .stat .n{font-size:26px;font-weight:750;letter-spacing:-.02em}
+  .stat .n span{font-size:14px;color:var(--muted);margin-left:1px}
+  .stat .n.cool{color:var(--cool)} .stat .n.amber{color:var(--amber)}
+  .stat .k{font-size:11.5px;color:var(--dim);margin-top:6px;letter-spacing:.02em}
+  .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+  @media (max-width:820px){.grid{grid-template-columns:1fr}}
+  a.card{display:block;text-decoration:none;color:inherit;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+    border:1px solid var(--line);border-radius:18px;padding:24px 24px 22px;transition:.22s;
+    position:relative;overflow:hidden}
+  a.card:hover{border-color:rgba(95,227,192,.4);transform:translateY(-3px);
+    box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  a.card .tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+  a.card h2{font-size:19px;margin:10px 0 10px;letter-spacing:-.01em}
+  a.card p{font-size:13px;line-height:1.8;color:var(--muted);margin:0 0 16px}
+  a.card .go{font-size:12.5px;color:var(--cool);display:inline-flex;align-items:center;gap:7px}
+  a.card .go svg{width:13px;height:13px}
+  a.card.alt{background:linear-gradient(180deg,rgba(95,227,192,.06),rgba(95,227,192,.015))}
+  .shot{margin:44px 0 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0A0F0E}
+  .shot img{display:block;width:100%}
+  .shot figcaption{font-size:11.5px;color:var(--dim);padding:12px 18px;border-top:1px solid var(--line)}
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;font-size:11.5px;color:var(--dim)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--cool)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow"><i></i>AI for Climate · 青年气候黑客松</div>
+
+  <h1>最热的那<span class="hot">三百米</span>，<br>应该有一条<em>更凉的路</em>。</h1>
+
+  <p class="lead">
+    <b>凉径 CoolPath</b> 是一个面向极端高温的社区气候适应原型：用 AI 把「热风险」翻译成两个可执行的动作
+    —— 给脆弱人群一条<b>最低热暴露</b>的步行路线，给社区工作者一张<b>今天该先敲谁家门</b>的走访名单。
+    单文件 HTML，零依赖、可离线运行。
+  </p>
+
+  <div class="stats">
+    <div class="stat"><div class="n cool">5.6<span>℃</span></div><div class="k">同一起终点 · 体感温度降幅</div></div>
+    <div class="stat"><div class="n">12<span>%</span> → 71<span>%</span></div><div class="k">路径树荫覆盖率</div></div>
+    <div class="stat"><div class="n amber">38<span>户</span></div><div class="k">今日需优先走访的高风险住户</div></div>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="coolpath.html">
+      <div class="tag">参赛作品 · 主版本</div>
+      <h2>凉径 CoolPath</h2>
+      <p>热暴露规划台 + 街景感知 + 社区关怀视图 + 可进入的第三人称模拟世界。三条路线对比、按角色给出建议、终点天柱信标，中英双语。</p>
+      <span class="go">进入作品
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5"/></svg>
+      </span>
+    </a>
+    <a class="card alt" href="breeze.html">
+      <div class="tag">合并版 · 城市尺度</div>
+      <h2>Breeze × CoolPath</h2>
+      <p>把城市级热公平指挥台与街道级凉径规划合并：24 街区热风险排序、预算优化，下钻到街巷里的一条凉路。中 / 英 / 土三语言。</p>
+      <span class="go">进入合并版
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5"/></svg>
+      </span>
+    </a>
+  </div>
+
+  <figure class="shot">
+    <img src="screenshots/02-console.png" alt="凉径 CoolPath 规划台：社区热暴露地图与路线对比">
+    <figcaption>规划台：社区街道级热力场 14:00–20:00，对比「最短路径」与「凉径」的体感温度、树荫覆盖与补水点。</figcaption>
+  </figure>
+
+  <figure class="shot">
+    <img src="screenshots/04-sim3d.png" alt="第三人称模拟世界：3D 街景与导航">
+    <figcaption>模拟世界：零依赖三维街景，WASD 行走，地面导航线 + 转向指引 + 终点天柱信标。</figcaption>
+  </figure>
+
+  <footer>
+    <span>凉径 CoolPath · 单文件零依赖原型</span>
+    <span><a href="https://github.com/Eamon-2014/AI-for-climite">GitHub 仓库</a></span>
+  </footer>
+</div>
+</body>
+</html>
